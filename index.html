@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cộng Đồng Nội Tâm Quốc Tế</title>
+<meta name="description" content="Không gian song ngữ Việt – Anh dành cho những ai đang trên hành trình hiểu mình, chữa lành và trưởng thành nội tâm.">
+<link rel="icon" href="images/brand/witflower.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <a href="#hero" class="nav__brand">
+    <span class="logo-badge"><img src="images/brand/witflower.png" alt="WiT" /></span>
+    <span class="nav__brand-name" data-i18n="brand"></span>
+  </a>
+  <nav class="nav__links" id="navMain"></nav>
+  <div class="nav__actions">
+    <div class="lang-toggle">
+      <button type="button" data-lang="vi" class="lang-btn" id="langBtnVi">VI</button>
+      <button type="button" data-lang="en" class="lang-btn" id="langBtnEn">EN</button>
+    </div>
+    <a href="#community" class="btn btn--primary btn--sm" data-i18n="hero.ctaPrimary"></a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+  <div class="hero__glow"></div>
+  <div class="hero__inner">
+    <span class="logo-badge logo-badge--lg"><img src="images/brand/witflower.png" alt="WiT" /></span>
+    <div class="eyebrow" data-i18n="hero.eyebrow"></div>
+    <h1 class="hero__title" data-i18n="hero.title"></h1>
+    <p class="hero__subtitle" data-i18n="hero.subtitle"></p>
+    <div class="hero__ctas">
+      <a href="#community" class="btn btn--primary" data-i18n="hero.ctaPrimary"></a>
+      <a href="#source" class="btn btn--outline" data-i18n="hero.ctaSecondary"></a>
+    </div>
+  </div>
+</section>
+
+<!-- SOURCE CONCEPTS -->
+<section id="source" class="section">
+  <div class="split">
+    <div>
+      <div class="kicker" data-i18n="source.kicker"></div>
+      <h2 class="title" data-i18n="source.title"></h2>
+      <p class="body" data-i18n="source.body"></p>
+      <a href="https://thudac.songtute.com/" target="_blank" rel="noopener" class="btn btn--primary btn--icon">
+        <span data-i18n="source.cta"></span> <span aria-hidden="true">→</span>
+      </a>
+    </div>
+    <div class="placeholder-panel">
+      <div class="placeholder-panel__label" data-i18n="source.placeholder"></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGRAM -->
+<section id="diagram" class="section section--alt center">
+  <div class="kicker" data-i18n="diagram.kicker"></div>
+  <h2 class="title title--narrow" data-i18n="diagram.title"></h2>
+  <p class="body body--narrow" data-i18n="diagram.body"></p>
+  <div class="flipbook-mount" id="diagramFlipbook"></div>
+  <div class="note" data-i18n="diagram.note"></div>
+</section>
+
+<!-- QUOTES -->
+<section id="quotes" class="section">
+  <div class="split split--reverse">
+    <div class="flipbook-mount" id="quotesFlipbook"></div>
+    <div>
+      <div class="kicker" data-i18n="quotes.kicker"></div>
+      <h2 class="title" data-i18n="quotes.title"></h2>
+      <p class="body" data-i18n="quotes.body"></p>
+      <div class="note note--left" data-i18n="quotes.note"></div>
+    </div>
+  </div>
+</section>
+
+<!-- DICTIONARY -->
+<section id="dictionary" class="section section--alt center">
+  <div class="narrow-col">
+    <div class="kicker" data-i18n="dictionary.kicker"></div>
+    <h2 class="title title--sm" data-i18n="dictionary.title"></h2>
+    <p class="body" data-i18n="dictionary.body"></p>
+    <a href="https://giaotrinhnoitam.io.vn/dictionary" target="_blank" rel="noopener" class="btn btn--dark btn--icon">
+      <span data-i18n="dictionary.cta"></span> <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- COURSE -->
+<section id="course" class="section">
+  <div class="split">
+    <div class="placeholder-panel" style="order:1;">
+      <div class="placeholder-panel__label" data-i18n="course.placeholder"></div>
+    </div>
+    <div style="order:2;">
+      <div class="kicker" data-i18n="course.kicker"></div>
+      <h2 class="title title--sm" data-i18n="course.title"></h2>
+      <p class="body" data-i18n="course.body"></p>
+      <a href="https://giaotrinhnoitam.io.vn/roadmap" target="_blank" rel="noopener" class="btn btn--primary btn--icon">
+        <span data-i18n="course.cta"></span> <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community" class="section community center">
+  <div class="narrow-col">
+    <div class="kicker kicker--light" data-i18n="community.kicker"></div>
+    <h2 class="title title--light" data-i18n="community.title"></h2>
+    <p class="body body--light" data-i18n="community.body"></p>
+  </div>
+  <div class="community__links" id="communityLinks"></div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey" class="section center">
+  <div class="kicker" data-i18n="journey.kicker"></div>
+  <h2 class="title title--sm" data-i18n="journey.title"></h2>
+  <div class="journey__grid" id="journeyGrid"></div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact" class="footer">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div>
+        <div class="footer__brand">
+          <span class="logo-badge"><img src="images/brand/witflower.png" alt="WiT" /></span>
+          <span class="footer__brand-name" data-i18n="brand"></span>
+        </div>
+        <p class="footer__tagline" data-i18n="footer.tagline"></p>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <div class="footer__label" data-i18n="footer.contactLabel"></div>
+          <a class="footer__email" id="footerEmail" href="#"></a>
+        </div>
+        <div>
+          <div class="footer__label" data-i18n="footer.sitemapLabel"></div>
+          <div class="footer__sitemap" id="footerSitemap"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">© 2026 <span data-i18n="brand"></span> — <span data-i18n="footer.rights"></span></div>
+  </div>
+</footer>
+
+<script src="js/diagrams-data.js"></script>
+<script src="js/quotes-data.js"></script>
+<script src="js/i18n-data.js"></script>
+<script src="js/flipbook.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
