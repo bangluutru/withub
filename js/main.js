@@ -9,13 +9,11 @@
     return node;
   }
 
-  function flipLabels(bookTotalGetter) {
+  function flipLabels() {
     return {
       prevLabel: currentLang === 'vi' ? '‹ Trước' : '‹ Prev',
       nextLabel: currentLang === 'vi' ? 'Tiếp ›' : 'Next ›',
-      pageLabel: (current, total) => currentLang === 'vi' ? `Trang ${current} / ${total}` : `Page ${current} / ${total}`,
-      pageNumLabel: (n) => currentLang === 'vi' ? `Trang ${n}` : `Page ${n}`,
-      jumpLabel: (current, total) => currentLang === 'vi' ? `Đi tới trang ${current}/${total}` : `Go to page ${current}/${total}`
+      pageLabel: (current, total) => currentLang === 'vi' ? `Trang ${current} / ${total}` : `Page ${current} / ${total}`
     };
   }
 
@@ -102,6 +100,10 @@
     });
   }
 
+  function prettifyBasename(name) {
+    return name.replace(/_/g, ' · ');
+  }
+
   // --- Flipbooks ---
   const diagramFlipbook = new Flipbook(document.getElementById('diagramFlipbook'), {
     total: DIAGRAM_BASENAMES.length,
@@ -109,8 +111,8 @@
     paper: '#FBF6F2',
     width: 340,
     height: 480,
-    showJump: true,
     getSrc: (pageNum) => `images/dohinh/${encodeURIComponent(DIAGRAM_BASENAMES[pageNum - 1] + '_' + currentLang)}.webp`,
+    getTocLabel: (pageNum) => prettifyBasename(DIAGRAM_BASENAMES[pageNum - 1]),
     texts: Object.assign({
       coverTitle: RAW.diagram.bookTitle.vi,
       coverSubtitle: RAW.diagram.bookSubtitle.vi
@@ -123,7 +125,6 @@
     paper: '#FBF6F2',
     width: 300,
     height: 430,
-    showJump: false,
     getSrc: (pageNum) => `images/quotes/${encodeURIComponent(QUOTE_FILENAMES[pageNum - 1])}`,
     texts: Object.assign({
       coverTitle: RAW.quotes.bookTitle.vi,
@@ -136,6 +137,7 @@
       coverTitle: RAW.diagram.bookTitle[currentLang],
       coverSubtitle: RAW.diagram.bookSubtitle[currentLang]
     }, flipLabels()));
+    diagramFlipbook.refreshImages();
     quotesFlipbook.setTexts(Object.assign({
       coverTitle: RAW.quotes.bookTitle[currentLang],
       coverSubtitle: RAW.quotes.bookSubtitle[currentLang]
