@@ -11,8 +11,7 @@
 
   function flipLabels() {
     return {
-      prevLabel: currentLang === 'vi' ? '‹ Trước' : '‹ Prev',
-      nextLabel: currentLang === 'vi' ? 'Tiếp ›' : 'Next ›',
+      openLabel: currentLang === 'vi' ? 'Mở sách để đọc' : 'Open the book',
       pageLabel: (current, total) => currentLang === 'vi' ? `Trang ${current} / ${total}` : `Page ${current} / ${total}`
     };
   }
